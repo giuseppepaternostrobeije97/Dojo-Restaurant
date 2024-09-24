@@ -2,7 +2,7 @@
 
 .customButton {
     background-color: $primary-color;
-    width: 200px;
+    min-width: 120px;
     /* Change the width if the available space is less than 320px */
     @media (max-width: 310px) {
       width: 100%;

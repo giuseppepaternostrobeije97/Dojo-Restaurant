@@ -1,0 +1,55 @@
+// -- COLOR
+@import "../../../colors.scss";
+
+#navbar {
+  width: 100%;
+  background-color: $secondary-color;
+  padding: 10px;
+  .navbarContainer {
+    max-width: 1480px;
+    margin: auto;
+    display: flex;
+    .logoContainer{
+        width: 40%;
+    }
+    // LEFT SIDE
+    .logoContainer {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .fa-solid,
+      .textLogo {
+        color: $primary-color;
+        font-weight: 800;
+        font-size: 40px;
+      }
+      .textLogo {
+        font-family: "Nunito";
+      }
+    }
+    // RIGHT SIDE
+    .navbarItemsContainer,.navbarItems{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        justify-content: flex-end;
+    }
+    .navbarItemsContainer {
+        width: 60%;
+        .navbarItems{
+            .navItem{
+                color: white;
+                font-size: 18px;
+                text-transform: uppercase;
+                transition:0.3s ease;
+                a{
+                    font-weight:500 ;
+                }
+                &:hover{
+                   color: $primary-color
+                }
+            }
+        }
+    }
+  }
+}
