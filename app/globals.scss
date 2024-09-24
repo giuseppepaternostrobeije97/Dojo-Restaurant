@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// # FONT CONFIG
+@import './fonts/fontConfig.css';
+
+// # RESET CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo';
+    font-weight: 300;
+}
