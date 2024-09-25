@@ -1,6 +1,10 @@
+//  -- NEXT
 import type { Metadata } from "next";
+// -- MAIN STYLE
 import "./globals.scss";
+// -- COMPONENTS
 import { Navbar } from "./ui/components/navbar";
+import { Footer } from "./ui/components/footer";
 
 export const metadata: Metadata = {
   title: "Restaurant",
@@ -24,6 +28,7 @@ export default function RootLayout({
       <body className={` antialiased`}>
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

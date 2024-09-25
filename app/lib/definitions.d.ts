@@ -41,3 +41,9 @@ export type navbarItem = {
     link:string;
     label:string;
 }
+
+// # SOCIAL
+export type social = {
+    social:string;
+    socialLink:string;
+}

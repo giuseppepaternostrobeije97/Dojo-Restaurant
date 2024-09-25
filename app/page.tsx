@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <div id="home" className="HomeContainer" >
-      <div style={{height:'1000rem',backgroundColor:'darkblue',width:'100%'}}></div>
+      <div style={{height:'100rem',backgroundColor:'darkgrey',width:'100%'}}></div>
     </div>
   );
 }

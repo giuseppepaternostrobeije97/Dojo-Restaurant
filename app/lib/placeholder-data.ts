@@ -7,6 +7,7 @@ import {
   chefType,
   reviewType,
   navbarItem,
+  social,
 } from "./definitions";
 
 // -- ASSETS
@@ -33,6 +34,9 @@ import reviewer4 from "../../public/assets/testimonial-4.jpg";
 
 // # MAIN DATA
 export const websiteName: string = "Restaurant";
+export const address:string = '123 Street, New York, USA';
+export const telephone:string = '+012 345 67890';
+export const email:string = 'info@example.com';
 
 // # SERVICES CARDS
 export const services: serviceCardType[] = [
@@ -226,5 +230,48 @@ export const sideNav: navbarItem[] = [
   {
     label: "testimonial",
     link: "testimonial",
+  },
+];
+
+// FOOTER
+export const footerLink: navbarItem[] = [
+  {
+    label: "about us",
+    link: "",
+  },
+  {
+    label: "contact us",
+    link: "",
+  },
+  {
+    label: "reservation",
+    link: "",
+  },
+  {
+    label: "privacy policy",
+    link: "",
+  },
+  {
+    label: "terms & condition",
+    link: "",
+  },
+];
+// SOCIAL
+export const socialLink: social[] = [
+  {
+    social: "twitter",
+    socialLink: "",
+  },
+  {
+    social: "facebook-f",
+    socialLink: "",
+  },
+  {
+    social: "youtube",
+    socialLink: "",
+  },
+  {
+    social: "linkedin-in",
+    socialLink: "",
   },
 ];

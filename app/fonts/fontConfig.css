@@ -109,3 +109,10 @@
   src: url("../fonts/NunitoSans_7pt-Black.ttf") format("truetype");
   font-weight: 900;
 }
+
+/* PACIFICO */
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
