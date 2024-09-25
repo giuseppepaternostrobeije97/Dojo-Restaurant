@@ -1,17 +1,77 @@
+"use client";
+
 // -- REACT
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 // -- NEXT
 import Link from "next/link";
 // -- STYLE
 import "./navbar.scss";
+// -- TYPE
+import { navbarItem } from "@/app/lib/definitions";
 // -- CONSTANT
-import { websiteName, navbarItems } from "@/app/lib/placeholder-data";
+import { websiteName, navbarItems, sideNav } from "@/app/lib/placeholder-data";
 // -- COMPONENTS
 import { Button } from "../Button";
 
 export const Navbar: FC = () => {
+  // # STATE
+  const [scroll, setScroll] = useState<boolean>(false);
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState<boolean>(false);
+  // # NAVBAR ITEM
+  function displayNavbar(): JSX.Element[] {
+    return navbarItems.map((item: navbarItem, index: number) => {
+      return (
+        <li key={index} className={`navItem ${item.label}`}>
+          {item.label === "pages" ? (
+            <div className="pagesItemContainer">
+              <span className="naviItemLink">{item.label}</span>
+              <i className="fa-solid fa-caret-down"></i>
+            </div>
+          ) : (
+            <Link href={`/${item.link}`} className="naviItemLink">
+              {item.label}
+            </Link>
+          )}
+          {item.label.toLowerCase() === "pages" && (
+            <ul className="sideMenu">
+              {sideNav.map((sideNavItem: navbarItem, index: number) => {
+                return (
+                  <li key={index}>
+                    <Link href={`/${sideNavItem.link}`}>
+                      {sideNavItem.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </li>
+      );
+    });
+  }
+  // # SCROLL EFFECT HANDLER EVENT
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  // # SCROLL EFFECT STATE HANDLER
+  function handleScroll(): void {
+    let windowScroll: number = window.scrollY;
+    let scrolly: boolean = false;
+    if (windowScroll > 110) {
+      scrolly = true;
+    }
+    setScroll(scrolly);
+  }
+  // # HANLDLE MOBILE MENU
+  function toggleMenu(): void {
+    setHamburgerMenuOpen(!hamburgerMenuOpen);
+  }
+
   return (
-    <nav className="navbar" id="navbar">
+    <nav className={`navbar ${scroll && "navbarBg"}`} id="navbar">
       <div className="navbarContainer">
         {/* LEFT SIDE */}
         <div className="logoContainer">
@@ -20,19 +80,20 @@ export const Navbar: FC = () => {
         </div>
         {/* RIGHT SIDE */}
         <div className="navbarItemsContainer">
-          <ul className="navbarItems">
-            {navbarItems.map((item, index) => {
-              return (
-                <li key={index} className="navItem">
-                  <Link href={`/${item.link}`}>{item.label}</Link>
-                </li>
-              );
-            })}
-          </ul>
-          <Button
-          ariaLabel="book a table"
-          labelBtn="book a table"
-          />
+          <ul className="navbarItems">{displayNavbar()}</ul>
+          <Button ariaLabel="book a table" labelBtn="book a table" />
+        </div>
+        {/* MOBILE RIGHT SIDE */}
+        <div className="navbarContainerMobile">
+          <i
+            className={`fa-solid fa-${hamburgerMenuOpen ? "x" : "bars"}`}
+            onClick={toggleMenu}
+          ></i>
+        </div>
+        {/* DROP DOWN MENU */}
+        <div className={`dropDownMenu ${hamburgerMenuOpen && "openDropDown"}`}>
+          {displayNavbar()}
+          <Button ariaLabel="book a table" labelBtn="book a table" customClass="mobileBtn"/>
         </div>
       </div>
     </nav>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import { Navbar } from "./ui/components/navbar";
 
 export const metadata: Metadata = {
   title: "Restaurant",
@@ -20,7 +21,10 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
       </head>
-      <body className={` antialiased`}>{children}</body>
+      <body className={` antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,22 +1,31 @@
 // -- COLOR
 @import "../../../colors.scss";
 
+$navbar-height: 70px;
+
 #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  transition: background-color 0.3s ease;
   background-color: $secondary-color;
-  padding: 10px;
+  @media (min-width: 981px) {
+    height: $navbar-height;
+    background-color: transparent;
+  }
   .navbarContainer {
     max-width: 1480px;
     margin: auto;
     display: flex;
-    .logoContainer{
-        width: 40%;
-    }
-    // LEFT SIDE
+    height: 100%;
+    flex-wrap: wrap;
     .logoContainer {
+      width: 30%;
       display: flex;
       align-items: center;
       gap: 20px;
+      padding-left: 20px;
       .fa-solid,
       .textLogo {
         color: $primary-color;
@@ -28,28 +37,144 @@
       }
     }
     // RIGHT SIDE
-    .navbarItemsContainer,.navbarItems{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        justify-content: flex-end;
+    .navbarItemsContainer,
+    .navbarItems {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      justify-content: flex-end;
+      height: $navbar-height;
     }
+    // DESKTPOP
     .navbarItemsContainer {
-        width: 60%;
-        .navbarItems{
-            .navItem{
-                color: white;
-                font-size: 18px;
-                text-transform: uppercase;
-                transition:0.3s ease;
-                a{
-                    font-weight:500 ;
-                }
-                &:hover{
-                   color: $primary-color
-                }
+      display: none;
+      @media (min-width: 981px) {
+        display: flex;
+      }
+      width: 70%;
+      .navbarItems {
+        .navItem {
+          position: relative;
+          height: $navbar-height;
+          display: flex;
+          align-items: center;
+          .naviItemLink {
+            color: white;
+            // font-size: 18px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+            a {
+              font-weight: 500;
+            }
+            &:hover {
+              color: $primary-color;
+            }
+          }
+          
+         
+        }
+      }
+    
+    }
+    .navbarItemsContainer,.navbarContainerMobile{
+        padding-right: 20px;
+    }
+    .navbarContainerMobile {
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      @media (min-width: 981px) {
+        display: none;
+      }
+      .fa-bars,
+      .fa-x {
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+    .dropDownMenu {
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      padding: 0px 20px;
+      .navItem {
+          list-style: none;
+          padding: 10px 0px;
+          &:first-child{
+              border-top: 1px solid rgba(255, 255, 255, 0.24);
+          }
+        &:hover{
+            .naviItemLink{
+                color: $primary-color;
             }
         }
+        .naviItemLink{
+            text-transform: uppercase;
+            color: #FFF;
+        }
+      }
+      .mobileBtn{
+        width: fit-content;
+        margin-bottom: 20px;
+      }
+      .sideMenu{
+        position: static;
+      }
     }
   }
+  .sideMenu {
+    position: absolute;
+    top: $navbar-height;
+    left: 0;
+    background: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    li {
+      padding: 10px 20px;
+      &:hover {
+        background-color: $primary-color;
+      }
+      a {
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .pagesItemContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .fa-caret-down {
+      color: white;
+      font-size: 10px;
+      transition: 0.3s ease;
+    }
+  }
+  .pages:hover {
+    .sideMenu {
+      max-height: 999px;
+    }
+    .fa-caret-down {
+      transform: rotate(-180deg);
+      color: $primary-color !important;
+    }
+  }
+
+}
+
+// GIVE COLOR BG TO NAVBAR WHEN SCROLL DOWN
+.navbarBg {
+  background-color: $secondary-color !important;
+}
+
+.openDropDown {
+  max-height: 999px !important;
 }

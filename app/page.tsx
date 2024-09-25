@@ -1,10 +1,8 @@
 // -- COMPONENTS
-import { Navbar } from "./ui/components/navbar";
-
 export default function Home() {
   return (
     <div id="home" className="HomeContainer" >
-      <Navbar/>
+      <div style={{height:'1000rem',backgroundColor:'darkblue',width:'100%'}}></div>
     </div>
   );
 }
