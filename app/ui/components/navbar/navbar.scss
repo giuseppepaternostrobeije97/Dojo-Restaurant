@@ -5,6 +5,7 @@ $navbar-height: 70px;
 
 #navbar {
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
@@ -58,6 +59,11 @@ $navbar-height: 70px;
           height: $navbar-height;
           display: flex;
           align-items: center;
+          &.activeLink{
+            .naviItemLink{
+                color: $primary-color;
+            }
+          }
           .naviItemLink {
             color: white;
             // font-size: 18px;

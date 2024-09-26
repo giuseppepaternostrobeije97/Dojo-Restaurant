@@ -1,0 +1,36 @@
+// -- COLORS
+@import '../../../colors.scss';
+
+#hero{
+    margin-bottom: 4rem;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .layer{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $secondary-color;
+        opacity: .9;
+    }
+    .heroContainer{
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        min-height: 400px;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color:#FFF;
+            font-family: 'Nunito';
+            font-size: 60px;
+            font-weight: bold;
+        }
+    }
+}

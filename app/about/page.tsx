@@ -1,12 +1,13 @@
-import React from 'react'
-import { Button } from '../ui/components/Button'
+// -- REACT
+import { FC } from "react";
+// -- COMPONENTS
+import { Hero } from "../ui/components/Hero";
 
-function About() {
-  return (
-    <div>About
-        <Button/>
-    </div>
-  )
-}
 
-export default About
+const About: FC = () => {
+  return <div>
+    <Hero title="About Us" />
+  </div>;
+};
+
+export default About;

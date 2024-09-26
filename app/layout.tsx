@@ -5,10 +5,12 @@ import "./globals.scss";
 // -- COMPONENTS
 import { Navbar } from "./ui/components/navbar";
 import { Footer } from "./ui/components/footer";
+// -- PLACEHOLDER DATA
+import { websiteName } from "./lib/placeholder-data";
 
 export const metadata: Metadata = {
-  title: "Restaurant",
-  description: "Restaurant",
+  title: websiteName,
+  description: websiteName,
 };
 
 export default function RootLayout({

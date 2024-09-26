@@ -4,6 +4,7 @@
 import { FC, useState, useEffect } from "react";
 // -- NEXT
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 // -- STYLE
 import "./navbar.scss";
 // -- TYPE
@@ -13,15 +14,19 @@ import { websiteName, navbarItems, sideNav } from "@/app/lib/placeholder-data";
 // -- COMPONENTS
 import { Button } from "../Button";
 
+
 export const Navbar: FC = () => {
   // # STATE
   const [scroll, setScroll] = useState<boolean>(false);
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState<boolean>(false);
+  // # GET PATHNAME
+  const pathname:string = usePathname().replace(/^\//, "");
+  console.log(pathname)
   // # NAVBAR ITEM
   function displayNavbar(): JSX.Element[] {
     return navbarItems.map((item: navbarItem, index: number) => {
       return (
-        <li key={index} className={`navItem ${item.label}`}>
+        <li key={index} className={`navItem ${item.label} ${pathname === item.link ? 'activeLink' : ''}`}>
           {item.label === "pages" ? (
             <div className="pagesItemContainer">
               <span className="naviItemLink">{item.label}</span>

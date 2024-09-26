@@ -33,7 +33,7 @@ import reviewer3 from "../../public/assets/testimonial-3.jpg";
 import reviewer4 from "../../public/assets/testimonial-4.jpg";
 
 // # MAIN DATA
-export const websiteName: string = "Restaurant";
+export const websiteName: string = "Restoran";
 export const address:string = '123 Street, New York, USA';
 export const telephone:string = '+012 345 67890';
 export const email:string = 'info@example.com';
