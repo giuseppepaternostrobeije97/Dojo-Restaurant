@@ -18,6 +18,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      transitionDelay: {
+        '2000': '20000ms',
+      }
     },
   },
   plugins: [],

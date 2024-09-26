@@ -201,8 +201,8 @@ export const navbarItems: navbarItem[] = [
     link: "about",
   },
   {
-    label: "service",
-    link: "service",
+    label: "services",
+    link: "services",
   },
   {
     label: "menu",
