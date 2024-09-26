@@ -3,15 +3,40 @@
 @tailwind utilities;
 
 // # FONT CONFIG
-@import './fonts/fontConfig.css';
-
-
+@import "./fonts/fontConfig.css";
+@import "./colors&variables.scss";
 
 // # RESET CSS
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Heebo';
-    font-weight: 300;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo";
+  font-weight: 300;
+}
+
+// # HOME SCSSS
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: $max-width-section;
+  margin: auto;
+  padding: 3rem 20px;
+  gap: 30px;
+  @media (min-width: 767px) {
+    flex-direction: row;
+    .service {
+      width: calc(100% / 2 - 30px);
+      padding: 0;
+    }
+  }
+  @media (min-width: 981px) {
+    .service {
+      width: calc(100% / 4 - 30px);
+    }
+  }
+  @media (min-width: $max-width-section) {
+    padding: 3rem 0px;
+  }
 }

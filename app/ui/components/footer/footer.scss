@@ -7,7 +7,7 @@
   .footerContainer {
     display: flex;
     flex-direction: column;
-    max-width: 1480px;
+    max-width: $max-width-section;
     margin: auto;
     @media (min-width: 981px) {
       flex-direction: row;

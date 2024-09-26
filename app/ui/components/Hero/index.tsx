@@ -21,14 +21,12 @@ export const Hero: FC<heroProps> = (props): JSX.Element => {
       ? props.backgroundImage.src
       : BG.src;
 
-  const heroHomeImg:string = HeroImage.src;
-
   return (
     <div id="hero" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="heroContainer">
         {props.homeHero ? (
           <div className="homeHero">
-            <div className="description">
+            <div className="description animated slideInLeft">
               <h1>
                 Enjoy Our <br /> Delicious Meal
               </h1>
@@ -51,7 +49,7 @@ export const Hero: FC<heroProps> = (props): JSX.Element => {
             </div>
           </div>
         ) : (
-          <div className="basicHero">
+          <div className="basicHero animated slideInDown">
             <h1 className="heroTitle">{props.title}</h1>
             {<span className="displayPath">{props.displayPath}</span>}
           </div>

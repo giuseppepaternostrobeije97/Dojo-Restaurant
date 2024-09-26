@@ -1,0 +1,29 @@
+// # VARIABLES
+@import '../../../colors&variables.scss';
+
+#serviceCard{
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    border-radius: 2px;
+
+    .serviceIcon{
+        color:$primary-color;
+        font-size: 50px;
+    }
+    .serviceTitle{
+        font-weight: 800;
+        font-size: 25px;
+        font-family: 'Nunito';
+        margin: 20px 0px 5px 0;
+    }
+    .serviceDescription,.serviceIcon,.serviceTitle{
+        transition: color .3s ease;
+    }
+    &:hover{
+        background-color: $primary-color;
+        .serviceIcon,.serviceTitle,.serviceDescription{
+            color: #FFF;
+        }
+    }
+}
