@@ -1,0 +1,100 @@
+// -- VARIABLES
+@import "../../../colors&variables.scss";
+
+#aboutSection {
+  max-width: $max-width-section;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 3rem 30px;
+  @media (min-width: $max-width-section) {
+    padding: 3rem 0px;
+  }
+  @media (min-width: 981px) {
+    flex-direction: row;
+    align-items: center;
+    // gap: 20px;
+    .aboutGallery,
+    .aboutPresentation {
+      width: calc(100% / 2 - 30px);
+    }
+  }
+  .aboutGallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .imgContainer {
+      width: calc(100% / 2 - 20px);
+      &:nth-child(2) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        .aboutImg {
+          width: 75%;
+        }
+      }
+      &:nth-child(3) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        .aboutImg {
+          width: 75%;
+        }
+      }
+    }
+  }
+  .aboutPresentation {
+    .paragTitle {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      h4 {
+        font-size: 22px;
+        font-family: "Pacifico";
+        color: $primary-color;
+      }
+    }
+    h3 {
+      font-size: 45px;
+      font-weight: bold;
+      .fa-solid {
+        color: $primary-color;
+        margin-left: 10px;
+      }
+    }
+    p {
+      margin: 18px 0;
+    }
+    .presentData {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 30px 0;
+      @media (min-width: 981px) {
+          flex-direction: row;
+          gap: 120px;
+        }
+        .experienceData,.masterChefData{
+            display: flex;
+            .number{
+            border-left: 5px solid $primary-color;
+            padding: 0px 20px;
+            border-radius: 3px;
+            span{
+                color: $primary-color;
+                font-size: 38px;
+                font-weight: bold;
+            }
+        }
+        .text{
+            span{
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+        }
+      }
+    }
+  }
+}

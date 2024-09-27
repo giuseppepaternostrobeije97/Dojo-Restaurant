@@ -21,7 +21,6 @@ export const Navbar: FC = () => {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState<boolean>(false);
   // # GET PATHNAME
   const pathname:string = usePathname().replace(/^\//, "");
-  console.log(pathname)
   // # NAVBAR ITEM
   function displayNavbar(): JSX.Element[] {
     return navbarItems.map((item: navbarItem, index: number) => {

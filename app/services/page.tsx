@@ -1,28 +1,23 @@
 'use client';
 
 // -- REACT
-import { FC ,useEffect} from "react";
+import { FC } from "react";
 // -- COMPONENTS
 import { Hero } from "../ui/components/Hero";
 import { ServiceCard } from "../ui/components/serviceCard";
 // -- DATA
-import { services } from "../lib/placeholder-data";
+import { services,timeDelay } from "../lib/placeholder-data";
 // -- TYPE
 import { serviceCardType } from "../lib/definitions";
 // -- STLE
 import './services.scss';
 // -- ANIMATION
-import { WOW } from 'wowjs';
+import useWow from "../hooks/useWow";
 
 
 const Services: FC = () => {
-
-  useEffect(() => {
-    const wow = new WOW();
-    wow.init();
-  }, []);
-  // # ASSING DELAY DYNAMICALLY TO SERVICE CARD
-  const timeDelay: string[] = ["0.1s", "0.3s", "0.5s", "0.7s"];
+  // # HOOK THAT INITIALIZE WOW IN THE COMPONENT
+  useWow()
 
   // # DISPLAY SERVICE CARDS
   function displayService(): JSX.Element[] {

@@ -9,6 +9,7 @@ import {
   navbarItem,
   social,
 } from "./definitions";
+import { StaticImageData } from "next/image";
 
 // -- ASSETS
 
@@ -31,12 +32,17 @@ import reviewer1 from "../../public/assets/testimonial-1.jpg";
 import reviewer2 from "../../public/assets/testimonial-2.jpg";
 import reviewer3 from "../../public/assets/testimonial-3.jpg";
 import reviewer4 from "../../public/assets/testimonial-4.jpg";
+// # about gallery
+import aboutGallery1 from "../../public/assets/about-1.jpg";
+import aboutGallery2 from "../../public/assets/about-2.jpg";
+import aboutGallery3 from "../../public/assets/about-3.jpg";
+import aboutGallery4 from "../../public/assets/about-4.jpg";
 
 // # MAIN DATA
 export const websiteName: string = "Restoran";
-export const address:string = '123 Street, New York, USA';
-export const telephone:string = '+012 345 67890';
-export const email:string = 'info@example.com';
+export const address: string = "123 Street, New York, USA";
+export const telephone: string = "+012 345 67890";
+export const email: string = "info@example.com";
 
 // # SERVICES CARDS
 export const services: serviceCardType[] = [
@@ -190,6 +196,14 @@ export const reviews: reviewType[] = [
   },
 ];
 
+// # ABOUT GALLERY
+export const aboutGallery: StaticImageData[] = [
+  aboutGallery1,
+  aboutGallery2,
+  aboutGallery3,
+  aboutGallery4,
+];
+
 // # NAVBAR ITEMS
 export const navbarItems: navbarItem[] = [
   {
@@ -275,3 +289,6 @@ export const socialLink: social[] = [
     socialLink: "",
   },
 ];
+
+// # ASSING DELAY DYNAMICALLY TO SERVICE CARD
+export const timeDelay: string[] = ["0.1s", "0.3s", "0.5s", "0.7s"];
