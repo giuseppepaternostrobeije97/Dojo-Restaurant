@@ -9,7 +9,7 @@
     flex-direction: column;
     max-width: $max-width-section;
     margin: auto;
-    @media (min-width: 981px) {
+    @media (min-width: 767px) {
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -28,6 +28,9 @@
   }
   .section {
     color: #fff;
+    @media (min-width: 767px) {
+      width: 50%;
+    }
     @media (min-width: 981px) {
       width: 25%;
     }
