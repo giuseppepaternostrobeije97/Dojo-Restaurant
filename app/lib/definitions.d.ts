@@ -23,9 +23,7 @@ export type chefType = {
   surame: string;
   role: tring;
   profilePic: string | StaticImageData;
-  facebookLink?: string;
-  twitterLink?: string;
-  instagramLink?: string;
+  social: social[];
 };
 
 // # REVIEWS

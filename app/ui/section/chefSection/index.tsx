@@ -5,9 +5,11 @@ import "./chef-section.scss";
 // -- COMPONENTS
 import { ChefCard } from "../../components/ChefCard";
 // -- DATA
-import { chefList,timeDelay } from "@/app/lib/placeholder-data";
+import { chefList, timeDelay } from "@/app/lib/placeholder-data";
+// -- TYPE
+import { chefSectionProp } from "./chef-section";
 
-export const ChefSection: FC = (): JSX.Element => {
+export const ChefSection: FC<chefSectionProp> = (props): JSX.Element => {
   // # DISPLAY CHEF
   function displayChefList(): JSX.Element[] {
     return chefList.map((chef, index) => {
@@ -22,14 +24,25 @@ export const ChefSection: FC = (): JSX.Element => {
             role={chef.role}
             profilePic={chef.profilePic}
             key={index}
-            social1={chef.facebookLink}
-            social2={chef.twitterLink}
-            social3={chef.instagramLink}
+            social={chef.social}
           />
         </div>
       );
     });
   }
 
-  return <div id="chefSection">{displayChefList()}</div>;
+  return (
+    <div id="chefSection">
+      <div className="headSection">
+        <div className="headText">
+          <div className="line"></div>
+          <span>Team Members</span>
+          <div className="line"></div>
+        </div>
+        <h3>Our Master Chefs</h3>
+      </div>
+      {displayChefList()}
+      {props.dublicateChefList && displayChefList()}
+    </div>
+  );
 };

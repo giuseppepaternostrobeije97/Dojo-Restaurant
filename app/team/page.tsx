@@ -3,15 +3,13 @@ import { FC } from "react";
 // -- COMPONENTS
 import { Hero } from "../ui/components/Hero";
 // -- SECTIONS
-import { AboutSection } from "../ui/section/aboutSection";
 import { ChefSection } from "../ui/section/chefSection";
 
-const About: FC = () => {
+const Team: FC = () => {
   return <div>
-    <Hero title="About Us" />
-    <AboutSection/>
-    <ChefSection/>
+    <Hero title="Our Team" />
+    <ChefSection dublicateChefList/>
   </div>;
 };
 
-export default About;
+export default Team;

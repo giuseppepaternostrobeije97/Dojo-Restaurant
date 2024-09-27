@@ -8,6 +8,19 @@ import './chef-card.scss';
 import Image from "next/image";
 
 export const ChefCard:FC<chefCardProps> = (props):JSX.Element => {
+
+    // # DISPLAY SOCIAL FOOTER IN CARD
+    function displaySocial():JSX.Element[]{
+        return(
+            props?.social?.map((item,index) => {
+                return(
+                    <div className="socialMiniCard" key={index}>
+                        <i className={`fa-brands fa-${item.social}`}></i>
+                    </div>
+                )
+            })
+        )
+    }
     return(
         <div id="chefCard" key={props.key}>
             <div className="profileImgContainer">
@@ -21,7 +34,9 @@ export const ChefCard:FC<chefCardProps> = (props):JSX.Element => {
             <div className="role">
                 <span>{props.role}</span>
             </div>
-            <div className="socialContainer"></div>
+            <div className="socialContainer">
+                {displaySocial()}
+            </div>
         </div>
     )
 }
