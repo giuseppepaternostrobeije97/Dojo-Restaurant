@@ -5,6 +5,7 @@ import { Hero } from "./ui/components/Hero";
 import { ServiceCard } from "./ui/components/serviceCard";
 // -- SECTIONS
 import { AboutSection } from "./ui/section/aboutSection";
+import { ChefSection } from "./ui/section/chefSection";
 // # DATA
 import { services,timeDelay } from "./lib/placeholder-data";
 // # TYPE
@@ -35,6 +36,7 @@ const Home: FC = () => {
       <Hero homeHero />
       <div className="servicesSection">{displayService()}</div>
       <AboutSection />
+      <ChefSection/>
     </div>
   );
 };

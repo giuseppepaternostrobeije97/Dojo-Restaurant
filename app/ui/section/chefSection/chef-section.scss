@@ -1,0 +1,30 @@
+// -- VARIABLES
+@import '../../../colors&variables.scss';
+
+#chefSection{
+    padding: 3rem 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    max-width: $max-width-section;
+    margin: auto;
+    @media (min-width: 767px) {
+        flex-direction: row;
+        .chefCardContainer{
+            width: calc(100% / 2 - 30px)
+        }
+      }
+      @media (min-width: 981px) {
+        .chefCardContainer{
+            width: calc(100% / 4 - 30px)
+        }
+      }
+      @media (min-width: $max-width-section) {
+        padding: 3rem 0px;
+      }
+      .chefCardContainer{
+        display: flex;
+        justify-content: center;
+      }
+}

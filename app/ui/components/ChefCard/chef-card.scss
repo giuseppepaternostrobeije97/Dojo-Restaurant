@@ -1,0 +1,41 @@
+#chefCard{
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    border-radius: 3px;
+    padding: 1rem 0;
+    &:hover{
+        .profileImgContainer{
+            img{
+                transform: scale(110%);
+            }
+        }
+    }
+    .profileImgContainer{
+        padding: 20px;
+        .profileImg{
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                transition: transform .3s ease;
+            }
+        }
+    }
+    .fullName,.role{
+        display: flex;
+        justify-content: center;
+    }
+    .fullName{
+        span{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    .role{
+        span{
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(126, 126, 126);
+        }
+    }
+}
