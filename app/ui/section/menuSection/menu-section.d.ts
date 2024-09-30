@@ -1,0 +1,1 @@
+export type foodSelection = 'breakfast' | 'launch' | 'dinner';
