@@ -1,0 +1,144 @@
+// -- VARIABLES
+@import "../../../colors&variables.scss";
+
+#reservationBanner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  @media (min-width: 767px) {
+    flex-direction: row;
+    .section {
+      width: 50%;
+    }
+  }
+  .section {
+    width: 100%;
+    &.videoSection {
+      background-image: url("../../../../public/assets/video.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      min-height: 500px;
+      .btn-play {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        box-sizing: content-box;
+        display: block;
+        width: 32px;
+        height: 44px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        padding: 18px 20px 18px 28px;
+        .fa-play {
+          color: $secondary-color;
+          font-size: 41px;
+          z-index: 20;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 100px;
+          height: 100px;
+          background: $primary-color;
+          border-radius: 50%;
+          transition: all 200ms;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 100px;
+          height: 100px;
+          background: $primary-color;
+          border-radius: 50%;
+          animation: pulse-border 1500ms ease-out infinite;
+        }
+      }
+    }
+    &.bookSection {
+      background-color: $secondary-color;
+      padding: 2rem;
+      .head {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        h4 {
+          font-family: "Pacifico";
+          color: $primary-color;
+          font-size: 20px;
+        }
+      }
+      .title {
+        font-size: 45px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .formSection {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          .inputContainer {
+            width: calc(50% - 10px);
+            label {
+              color: #fff;
+              font-weight: bold;
+            }
+          }
+          .textArea {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 15px;
+            label {
+              color: #fff;
+              font-weight: bold;
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+            textarea {
+              width: 100%;
+              padding: 25px 10px;
+              &:focus {
+                outline: 2px solid $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}

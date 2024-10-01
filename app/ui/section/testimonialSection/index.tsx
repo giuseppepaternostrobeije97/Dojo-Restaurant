@@ -76,7 +76,7 @@ export const TestimonialSection: FC = (): JSX.Element => {
   };
 
   return (
-    <div id="testimonialSection">
+    <div id="testimonialSection" className="wow fadeInUp">
       {/* HEAD SECTION */}
       <div className="headSection  wow fadeInUp">
         <div className="headText">

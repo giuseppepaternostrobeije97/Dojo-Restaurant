@@ -1,0 +1,45 @@
+// -- VARIABLES
+@import '../../../colors&variables.scss';;
+
+#genericInputText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    label {
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      min-height: 18px;
+    }
+    .wrapInput {
+      position: relative;
+      .inputText {
+        height: 36px;
+        padding: 25px 10px;
+        font-size: 14px;
+        width: 100%;
+        &:focus {
+          outline: 2px solid $primary-color;
+        }
+        &:disabled {
+          color: #0000008c;
+        }
+        &[type='date']::-webkit-calendar-picker-indicator {
+          display: none;
+        }
+      }
+      .iconOnEnd {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translatey(-50%);
+        font-size: 14px;
+      }
+    }
+    .errorMessage {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #d92b30;
+    }
+  }
+  

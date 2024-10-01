@@ -3,6 +3,7 @@ import { FC } from "react";
 // -- COMPONENTS
 import { Hero } from "./ui/components/Hero";
 import { ServiceCard } from "./ui/components/serviceCard";
+import { ReservationBanner } from "./ui/components/ReservationBanner";
 // -- SECTIONS
 import { AboutSection } from "./ui/section/aboutSection";
 import { ChefSection } from "./ui/section/chefSection";
@@ -39,6 +40,7 @@ const Home: FC = () => {
       <div className="servicesSection">{displayService()}</div>
       <AboutSection />
       <MenuSection/>
+      <ReservationBanner/>
       <ChefSection/>
       <TestimonialSection/>
     </div>

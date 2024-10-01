@@ -74,3 +74,10 @@
       font-weight: 700;
     }
   }
+
+  #booking{
+    .reservationBannerContainer{
+      max-width: $max-width-section;
+      margin: 0px auto 3rem auto;
+    }
+  }

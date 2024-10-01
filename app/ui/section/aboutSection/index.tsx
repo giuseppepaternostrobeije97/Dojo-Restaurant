@@ -32,7 +32,7 @@ export const AboutSection: FC = (): JSX.Element => {
   return (
     <div id="aboutSection">
       <div className="aboutGallery">{displayGallery()}</div>
-      <div className="aboutPresentation">
+      <div className="aboutPresentation wow fadeIn">
         <div className="paragTitle">
           <h4>About Us</h4>
           <div className="line"></div>
