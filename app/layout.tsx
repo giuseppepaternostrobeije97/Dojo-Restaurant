@@ -8,6 +8,7 @@ import { Footer } from "./ui/components/footer";
 // -- PLACEHOLDER DATA
 import { websiteName } from "./lib/placeholder-data";
 // -- WOW WRAPPER
+// @ts-ignore
 import WowWrapper from "./lib/wowWrapper";
 
 export const metadata: Metadata = {

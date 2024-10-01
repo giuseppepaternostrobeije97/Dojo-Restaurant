@@ -7,6 +7,7 @@ import { ServiceCard } from "./ui/components/serviceCard";
 import { AboutSection } from "./ui/section/aboutSection";
 import { ChefSection } from "./ui/section/chefSection";
 import { MenuSection } from "./ui/section/menuSection";
+import { TestimonialSection } from "./ui/section/testimonialSection";
 // # DATA
 import { services,timeDelay } from "./lib/placeholder-data";
 // # TYPE
@@ -39,6 +40,7 @@ const Home: FC = () => {
       <AboutSection />
       <MenuSection/>
       <ChefSection/>
+      <TestimonialSection/>
     </div>
   );
 };
