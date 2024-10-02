@@ -22,7 +22,6 @@ const Map:FC = ():JSX.Element => {
         mapContainerStyle={containerStyle}
         center={center}
         zoom={10}
-
       >
       </GoogleMap>
     </LoadScript>
@@ -30,5 +29,3 @@ const Map:FC = ():JSX.Element => {
 };
 
 export default Map;
-
-// AIzaSyATzV491uRxjWulXQIPS0JHPBp48g3CMmM
