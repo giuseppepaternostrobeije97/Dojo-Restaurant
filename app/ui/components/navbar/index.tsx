@@ -80,7 +80,7 @@ export const Navbar: FC = () => {
         {/* LEFT SIDE */}
         <div className="logoContainer">
           <i className="fa-solid fa-utensils"></i>
-          <h2 className="textLogo">{websiteName}</h2>
+          <h2 className="textLogo"><Link href={'/'}>{websiteName}</Link></h2>
         </div>
         {/* RIGHT SIDE */}
         <div className="navbarItemsContainer">

@@ -27,7 +27,7 @@
       gap: 20px;
       padding-left: 20px;
       .fa-solid,
-      .textLogo {
+      .textLogo a{
         color: $primary-color;
         font-weight: 800;
         font-size: 40px;
@@ -66,6 +66,7 @@
           .naviItemLink {
             color: white;
             // font-size: 18px;
+            font-weight: 600;
             text-transform: uppercase;
             transition: 0.3s ease;
             a {
