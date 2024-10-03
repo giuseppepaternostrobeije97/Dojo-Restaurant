@@ -1,0 +1,25 @@
+// -- VARIABLES
+@import '../../../colors&variables.scss';
+
+#headSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .headText {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      font-family: "Pacifico";
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 40px;
+    font-family: "Nunito";
+    font-weight: 700;
+  }
+}

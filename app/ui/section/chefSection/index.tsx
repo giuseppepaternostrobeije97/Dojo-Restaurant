@@ -4,6 +4,7 @@ import { FC } from "react";
 import "./chef-section.scss";
 // -- COMPONENTS
 import { ChefCard } from "../../components/ChefCard";
+import { HeadSection } from "../../components/HeadSection";
 // -- DATA
 import { chefList, timeDelay } from "@/app/lib/placeholder-data";
 // -- TYPE
@@ -33,14 +34,7 @@ export const ChefSection: FC<chefSectionProp> = (props): JSX.Element => {
 
   return (
     <div id="chefSection">
-      <div className="headSection">
-        <div className="headText">
-          <div className="line"></div>
-          <span>Team Members</span>
-          <div className="line"></div>
-        </div>
-        <h3>Our Master Chefs</h3>
-      </div>
+      <HeadSection headText="Team Members" title="Our Master Chef"/>
       {displayChefList()}
       {props.dublicateChefList && displayChefList()}
     </div>

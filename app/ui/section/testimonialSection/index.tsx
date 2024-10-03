@@ -6,6 +6,8 @@ import { FC, useEffect } from "react";
 import "./testimonial-section.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+// -- COMPONENTS
+import { HeadSection } from "../../components/HeadSection";
 // -- NEXT
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -33,13 +35,13 @@ export const TestimonialSection: FC = (): JSX.Element => {
 
       // Initialize Owl Carousel here
       window.$(".owl-carousel").owlCarousel({
-        items: 3, 
+        items: 3,
         loop: true,
         margin: 10,
-        nav:false,
-        dots:true,
+        nav: false,
+        dots: true,
         autoplay: true,
-        center:true,
+        center: true,
         responsive: {
           0: {
             items: 1,
@@ -47,9 +49,9 @@ export const TestimonialSection: FC = (): JSX.Element => {
           600: {
             items: 2,
           },
-          980:{
-            items:3
-          }
+          980: {
+            items: 3,
+          },
         },
       });
     }
@@ -78,14 +80,7 @@ export const TestimonialSection: FC = (): JSX.Element => {
   return (
     <div id="testimonialSection" className="wow fadeInUp">
       {/* HEAD SECTION */}
-      <div className="headSection  wow fadeInUp">
-        <div className="headText">
-          <div className="line"></div>
-          <span>Testimonial</span>
-          <div className="line"></div>
-        </div>
-        <h3>Our Clients Say!!!</h3>
-      </div>
+      <HeadSection headText="Testimonial" title="Our Client Say!!!" />
       {/* CAROUSEL */}
       <div className="owl-carousel testimonialContainer">
         {displayTestimonial()}

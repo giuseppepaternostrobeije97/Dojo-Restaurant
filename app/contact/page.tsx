@@ -4,6 +4,7 @@ import { FC } from "react";
 import { Hero } from "../ui/components/Hero";
 import { InputText } from "../ui/components/Input/Index";
 import Map from "../ui/components/Map";
+import { HeadSection } from "../ui/components/HeadSection";
 // -- STYLE
 import "./contact.scss";
 import { Button } from "../ui/components/Button";
@@ -14,14 +15,7 @@ const Contact: FC = () => {
       <Hero title="Contact Us" />
       <div className="contactContainer">
         {/* HEAD */}
-        <div className="headSection">
-          <div className="headText">
-            <div className="line"></div>
-            <span>Contact Us</span>
-            <div className="line"></div>
-          </div>
-          <h3>Contact For Any Query</h3>
-        </div>
+        <HeadSection headText="Contact Us" title="Contact For Any Query" />
         {/* INFO CONTACT */}
         <div className="infoContactContainer">
           <div className="infoContact">
@@ -57,7 +51,9 @@ const Contact: FC = () => {
         </div>
         {/* MAPS AND INPUT */}
         <div className="mapsAndForm">
-          <div className="mapsContainer"><Map/></div>
+          <div className="mapsContainer">
+            <Map />
+          </div>
           <div className="inputContainer">
             <form>
               <div className="info">

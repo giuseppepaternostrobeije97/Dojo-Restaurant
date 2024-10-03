@@ -5,6 +5,7 @@ import { FC } from "react";
 // -- COMPONENTS
 import { Hero } from "../ui/components/Hero";
 import { ServiceCard } from "../ui/components/serviceCard";
+import { HeadSection } from "../ui/components/HeadSection";
 // -- DATA
 import { services,timeDelay } from "../lib/placeholder-data";
 // -- TYPE
@@ -41,14 +42,7 @@ const Services: FC = () => {
   return (
     <div id="services">
       <Hero title="Services" />
-      <div className="headSection">
-        <div className="headText">
-          <div className="line"></div>
-          <span>Our Services</span>
-          <div className="line"></div>
-        </div>
-        <h3>Explore Our Services</h3>
-      </div>
+      <HeadSection headText="Ou Services" title="Explore Our Services"/>
       <div className="servicesSection">
         {displayService()}
         {displayService()}

@@ -9,6 +9,7 @@ import { foodSelection } from "./menu-section";
 import { menuItemType } from "@/app/lib/definitions";
 // -- COMPONENTS
 import { MenuCard } from "../../components/menuCard";
+import { HeadSection } from "../../components/HeadSection";
 // -- DATA
 import { menu } from "@/app/lib/placeholder-data";
 
@@ -39,14 +40,7 @@ export const MenuSection: FC = (): JSX.Element => {
   return (
     <div id="menuSection">
       {/* HEAD SECTION */}
-      <div className="headSection  wow fadeInUp">
-        <div className="headText">
-          <div className="line"></div>
-          <span>Food Menu</span>
-          <div className="line"></div>
-        </div>
-        <h3>Most Popular Items</h3>
-      </div>
+      <HeadSection headText="Food Menu" title="Most Popular Items"/>
       {/* SELECT MENU LIST */}
       <div className="foodTypeSelectionContainer wow fadeInUp">
         <div className="foodTypeSelection">
