@@ -14,6 +14,7 @@ import { navbarItem, social } from "@/app/lib/definitions";
 import Link from "next/link";
 // -- STYLE
 import "./footer.scss";
+import { InputText } from "../Input/Index";
 
 export const Footer: FC = () => {
   // # RENDER FOOTER NAV
@@ -96,20 +97,39 @@ export const Footer: FC = () => {
             <div className="line"></div>
           </div>
           <span>Dolor amet sit justo amet elitr clita ipsum elitr est.</span>
+          <InputText
+            name="signUp"
+            type="email"
+            buttonInInput
+            buttonText="sign up"
+            placeholder="Your Email"
+          />
         </div>
         {/* MINI FOOTER */}
         <div className="miniFooter">
           <div className="head">
             <span>
-              © <a className="underline" href="#">Your Site Name</a>, All Right Reserved. Designed By <a className="underline" href="https://htmlcodex.com/">HTML Codex</a>
+              ©{" "}
+              <a className="underline" href="#">
+                Your Site Name
+              </a>
+              , All Right Reserved. Designed By{" "}
+              <a className="underline" href="https://htmlcodex.com/">
+                HTML Codex
+              </a>
             </span>
-            <span>Distributed By <a className="underline" href="https://themewagon.com/">ThemeWagon</a></span>
+            <span>
+              Distributed By{" "}
+              <a className="underline" href="https://themewagon.com/">
+                ThemeWagon
+              </a>
+            </span>
           </div>
           <div className="links">
-            <Link href={'/'}>Home</Link>
-            <Link href={'/'}>Cookies</Link>
-            <Link href={'/'}>Help</Link>
-            <Link href={'/'}>FQAs</Link>
+            <Link href={"/"}>Home</Link>
+            <Link href={"/"}>Cookies</Link>
+            <Link href={"/"}>Help</Link>
+            <Link href={"/"}>FQAs</Link>
           </div>
         </div>
       </div>

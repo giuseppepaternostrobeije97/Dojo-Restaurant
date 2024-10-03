@@ -18,5 +18,7 @@ export type inputTextProps = {
     errorMessage?: string 
     invalidData?: boolean;
     iconOnEnd?: any;
+    buttonInInput?:boolean
+    buttonText?:string;
   };
   

@@ -1,9 +1,8 @@
-import { FC } from 'react';
+import { FC } from "react";
 // -- TYPE
-import { inputTextProps } from './input';
+import { inputTextProps } from "./input";
 // -- STYLE
-import './input.scss';
-
+import "./input.scss";
 
 /**
  * InputText component for rendering a text input field with customizable styles and error handling.
@@ -30,18 +29,18 @@ import './input.scss';
  * @returns {JSX.Element} Checkbox component with selection functionality.
  */
 
-export const InputText: FC<inputTextProps> = props => {
+export const InputText: FC<inputTextProps> = (props) => {
   //   # DEFINE STYLE OF THE INPUT
   const inputTextStyle = {
     textTransform: props.transformText,
-    backgroundColor: props.bgColor
+    backgroundColor: props.bgColor,
   };
 
   return (
     <div id="genericInputText" className={`${props.customClass}`}>
       <label htmlFor={props.name}>
         {props.label}
-        {props.isRequired ? '*' : ''}
+        {props.isRequired ? "*" : ""}
       </label>
       <div className="wrapInput">
         <input
@@ -59,13 +58,14 @@ export const InputText: FC<inputTextProps> = props => {
           disabled={props.disabled}
         />
         {props.iconOnEnd && <span className="iconOnEnd">✓</span>}
+        {props.buttonInInput && (
+          <button className="buttonInputStyle">{props.buttonText || ""}</button>
+        )}
       </div>
       {props.invalidData && (
         <span className="errorMessage">
-          {' '}
-          {props.errorMessage
-            ? props.errorMessage 
-            : ''}
+          {" "}
+          {props.errorMessage ? props.errorMessage : ""}
         </span>
       )}
     </div>
