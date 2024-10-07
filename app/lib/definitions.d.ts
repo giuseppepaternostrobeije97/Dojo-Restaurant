@@ -20,7 +20,7 @@ export type menuItemType = {
 // # CHEF
 export type chefType = {
   name: string;
-  surame: string;
+  surname: string;
   role: tring;
   profilePic: string | StaticImageData;
   social: social[];

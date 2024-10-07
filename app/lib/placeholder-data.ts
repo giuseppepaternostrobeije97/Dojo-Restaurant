@@ -128,7 +128,7 @@ export const menu: menuItemType[] = [
 export const chefList: chefType[] = [
   {
     name: "Full",
-    surame: "Name",
+    surname: "Name",
     role: "Desingation",
     profilePic: chef1,
     social: [
@@ -139,7 +139,7 @@ export const chefList: chefType[] = [
   },
   {
     name: "Full",
-    surame: "Name",
+    surname: "Name",
     role: "Desingation",
     profilePic: chef2,
     social: [
@@ -150,7 +150,7 @@ export const chefList: chefType[] = [
   },
   {
     name: "Full",
-    surame: "Name",
+    surname: "Name",
     role: "Desingation",
     profilePic: chef3,
     social: [
@@ -161,7 +161,7 @@ export const chefList: chefType[] = [
   },
   {
     name: "Full",
-    surame: "Name",
+    surname: "Name",
     role: "Desingation",
     profilePic: chef4,
     social: [
