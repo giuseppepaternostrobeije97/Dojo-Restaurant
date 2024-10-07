@@ -52,7 +52,7 @@ const Contact: FC = () => {
         {/* MAPS AND INPUT */}
         <div className="mapsAndForm">
           <div className="mapsContainer">
-            <Map />
+            <Map lat={45.610550610806136} lng={9.233765268536718}/>
           </div>
           <div className="inputContainer">
             <form>

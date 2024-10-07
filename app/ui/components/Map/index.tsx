@@ -1,28 +1,36 @@
-'use client'
+"use client";
 
-import React,{FC} from "react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import React, { FC } from "react";
+import { GoogleMap, LoadScript,Marker } from "@react-google-maps/api";
 
 // Define the style for the map container using Tailwind
 const containerStyle = {
   width: "100%",
   height: "100%",
-  minHeight: '400px'
+  minHeight: "400px",
 };
 
-const center = {
-  lat: 45.610550610806136,
-  lng:  9.233765268536718,
+type MapProps = {
+  lng: number;
+  lat: number;
 };
 
-const Map:FC = ():JSX.Element => {
+const Map: FC<MapProps> = (props): JSX.Element => {
+  const center = {
+    lat: props.lat,
+    lng: props.lng,
+  };
+
   return (
-    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
+    <LoadScript
+      googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
+    >
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
         zoom={10}
       >
+        <Marker position={center}/>
       </GoogleMap>
     </LoadScript>
   );

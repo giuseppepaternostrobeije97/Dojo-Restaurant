@@ -1,0 +1,83 @@
+@import "../../colors&variables.scss";
+
+#other {
+  .restaurant-list {
+    max-width: $max-width-section;
+    margin: 3rem auto;
+    h2 {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .mainContainer{
+        display: flex;
+        .restaurants-container {
+          padding: 4rem 0;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 100%;
+          @media (min-width: 767px) {
+            flex-direction: row;
+            width: 50%;
+            justify-content: space-around;
+            gap: 30px;
+            li {
+              min-width: 300px;
+              .infoContainer {
+                cursor: pointer;
+                transition: 0.3s all ease;
+                margin-bottom: 1rem;
+                padding: 10px;
+                background-color: $primary-color;
+    
+                h3 {
+                  color: #fff;
+                  font-size: 25px;
+                  font-weight: 500;
+                }
+                p {
+                  color: $secondary-color;
+                }
+              }
+            }
+          }
+          //   @media (min-width: 981px) {
+          //     .service {
+          //       width: calc(100% / 4 - 30px);
+          //     }
+          //   }
+          //   @media (min-width: ) {
+          //     padding: 3rem 0px;
+          //   }
+        }
+        .menuContainer{
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            min-width: 50%;
+            .menuItem{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                li{
+                    transition: .3s all ease;
+                    padding: 20px 10px;
+                    border: 1px solid $primary-color;
+                    &:hover{
+                        background-color: $primary-color;
+                    }
+                    h3{
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    h5{
+                        color: darkgray;
+                    }
+                }
+            }
+        }
+    }
+  }
+}
