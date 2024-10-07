@@ -3,17 +3,17 @@
 // -- REACT
 import { FC } from "react";
 // -- COMPONENTS
-import { Hero } from "../ui/components/Hero";
-import { ServiceCard } from "../ui/components/serviceCard";
-import { HeadSection } from "../ui/components/HeadSection";
+import { Hero } from "../../ui/components/Hero";
+import { ServiceCard } from "../../ui/components/serviceCard";
+import { HeadSection } from "../../ui/components/HeadSection";
 // -- DATA
-import { services,timeDelay } from "../lib/placeholder-data";
+import { services,timeDelay } from "../../lib/placeholder-data";
 // -- TYPE
-import { serviceCardType } from "../lib/definitions";
+import { serviceCardType } from "../../lib/definitions";
 // -- STLE
 import './services.scss';
 // -- ANIMATION
-import useWow from "../hooks/useWow";
+import useWow from "../../hooks/useWow";
 
 
 const Services: FC = () => {

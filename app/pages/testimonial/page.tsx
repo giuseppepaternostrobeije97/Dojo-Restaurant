@@ -1,9 +1,9 @@
 // -- REACT
 import { FC } from "react";
 // -- COMPONENTS
-import { Hero } from "../ui/components/Hero";
+import { Hero } from "../../ui/components/Hero";
 // -- SECTIONS
-import { TestimonialSection } from "../ui/section/testimonialSection";
+import { TestimonialSection } from "../../ui/section/testimonialSection";
 
 const Testimonial: FC = () => {
   return <div>

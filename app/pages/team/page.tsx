@@ -1,9 +1,9 @@
 // -- REACT
 import { FC } from "react";
 // -- COMPONENTS
-import { Hero } from "../ui/components/Hero";
+import { Hero } from "../../ui/components/Hero";
 // -- SECTIONS
-import { ChefSection } from "../ui/section/chefSection";
+import { ChefSection } from "../../ui/section/chefSection";
 
 const Team: FC = () => {
   return <div>

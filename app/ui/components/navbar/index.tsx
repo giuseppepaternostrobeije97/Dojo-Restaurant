@@ -14,25 +14,32 @@ import { websiteName, navbarItems, sideNav } from "@/app/lib/placeholder-data";
 // -- COMPONENTS
 import { Button } from "../Button";
 
-
 export const Navbar: FC = () => {
   // # STATE
   const [scroll, setScroll] = useState<boolean>(false);
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState<boolean>(false);
   // # GET PATHNAME
-  const pathname:string = usePathname().replace(/^\//, "");
+  const pathname: string = usePathname().replace(/^\//, "");
   // # NAVBAR ITEM
   function displayNavbar(): JSX.Element[] {
     return navbarItems.map((item: navbarItem, index: number) => {
       return (
-        <li key={index} className={`navItem ${item.label} ${pathname === item.link ? 'activeLink' : ''}`}>
+        <li
+          key={index}
+          className={`navItem ${item.label} ${
+            pathname === item.link ? "activeLink" : ""
+          }`}
+        >
           {item.label === "pages" ? (
             <div className="pagesItemContainer">
               <span className="naviItemLink">{item.label}</span>
               <i className="fa-solid fa-caret-down"></i>
             </div>
           ) : (
-            <Link href={`/${item.link}`} className="naviItemLink">
+            <Link
+              href={item.link === "" ? "/" : `/pages/${item.link}`}
+              className="naviItemLink"
+            >
               {item.label}
             </Link>
           )}
@@ -41,7 +48,11 @@ export const Navbar: FC = () => {
               {sideNav.map((sideNavItem: navbarItem, index: number) => {
                 return (
                   <li key={index}>
-                    <Link href={`/${sideNavItem.link}`}>
+                    <Link
+                      href={
+                        sideNavItem.link === "" ? "/" : `/pages/${sideNavItem.link}`
+                      }
+                    >
                       {sideNavItem.label}
                     </Link>
                   </li>
@@ -80,7 +91,9 @@ export const Navbar: FC = () => {
         {/* LEFT SIDE */}
         <div className="logoContainer">
           <i className="fa-solid fa-utensils"></i>
-          <h2 className="textLogo"><Link href={'/'}>{websiteName}</Link></h2>
+          <h2 className="textLogo">
+            <Link href={"/"}>{websiteName}</Link>
+          </h2>
         </div>
         {/* RIGHT SIDE */}
         <div className="navbarItemsContainer">
@@ -97,7 +110,11 @@ export const Navbar: FC = () => {
         {/* DROP DOWN MENU */}
         <div className={`dropDownMenu ${hamburgerMenuOpen && "openDropDown"}`}>
           {displayNavbar()}
-          <Button ariaLabel="book a table" labelBtn="book a table" customClass="mobileBtn"/>
+          <Button
+            ariaLabel="book a table"
+            labelBtn="book a table"
+            customClass="mobileBtn"
+          />
         </div>
       </div>
     </nav>
