@@ -1,0 +1,38 @@
+@import '../../colors&variables.scss';
+
+#login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .head{
+        background-color: $secondary-color;
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 30px;
+        h1{
+            font-size: 3rem;
+            font-weight: 700;
+            color: $primary-color;
+        }
+    }
+    .loginContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form{
+            background-color: $secondary-color;
+            padding: 2rem 4rem;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .customButton{
+                margin-top: 40px;
+            }
+        }
+    }
+}

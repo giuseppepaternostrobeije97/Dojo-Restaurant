@@ -98,6 +98,7 @@ export const Navbar: FC = () => {
         {/* RIGHT SIDE */}
         <div className="navbarItemsContainer">
           <ul className="navbarItems">{displayNavbar()}</ul>
+          <Link href={'/pages/login'}><i className="fa-solid fa-user-large"></i></Link>
           <Button ariaLabel="book a table" labelBtn="book a table" />
         </div>
         {/* MOBILE RIGHT SIDE */}
@@ -110,6 +111,7 @@ export const Navbar: FC = () => {
         {/* DROP DOWN MENU */}
         <div className={`dropDownMenu ${hamburgerMenuOpen && "openDropDown"}`}>
           {displayNavbar()}
+          <Link href={'/pages/login'}><i className="fa-solid fa-user-large"></i></Link>
           <Button
             ariaLabel="book a table"
             labelBtn="book a table"

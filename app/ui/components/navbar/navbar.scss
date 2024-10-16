@@ -80,7 +80,9 @@
          
         }
       }
-    
+      .fa-user-large{
+        color:$primary-color
+      }
     }
     .navbarItemsContainer,.navbarContainerMobile{
         padding-right: 20px;
@@ -130,6 +132,10 @@
       }
       .sideMenu{
         position: static;
+      }
+      .fa-user-large{
+        color:$primary-color;
+        margin-bottom:20px;
       }
     }
   }
