@@ -9,20 +9,23 @@ import "./login.scss";
 // -- COMPONENTS
 import { InputText } from "@/app/ui/components/Input/Index";
 import { Button } from "@/app/ui/components/Button";
+// -- SERVICES
+import { AUTH } from "@/app/api/login/route";
 
 const Login: FC = () => {
   const [username, setUsername] = useState("eve.holt@reqres.in");
   const [password, setPassword] = useState("cityslicka");
   const router = useRouter();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === "admin" && password === "password") {
-      localStorage.setItem("auth", "true");
-      router.push("/dashboard");
-    } else {
-      alert("Credenziali non valide");
-    }
+    const response = await AUTH(username,password);
+    // if (username === "admin" && password === "password") {
+    //   localStorage.setItem("auth", "true");
+    //   router.push("/dashboard");
+    // } else {
+    //   alert("Credenziali non valide");
+    // }
   };
   return (
     <div id="login" className="vh-100">

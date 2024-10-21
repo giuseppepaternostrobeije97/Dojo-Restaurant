@@ -1,13 +1,13 @@
 // -- REACT
 import { FC } from "react";
 // -- COMPONENTS
-import { Hero } from "../../ui/components/Hero";
-import { InputText } from "../../ui/components/Input/Index";
-import Map from "../../ui/components/Map";
-import { HeadSection } from "../../ui/components/HeadSection";
+import { Hero } from "../ui/components/Hero";
+import { InputText } from "../ui/components/Input/Index";
+import Map from "../ui/components/Map";
+import { HeadSection } from "../ui/components/HeadSection";
 // -- STYLE
 import "./contact.scss";
-import { Button } from "../../ui/components/Button";
+import { Button } from "../ui/components/Button";
 
 const Contact: FC = () => {
   return (

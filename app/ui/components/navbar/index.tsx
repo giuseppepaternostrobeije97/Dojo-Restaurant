@@ -19,6 +19,7 @@ export const Navbar: FC = () => {
   const [scroll, setScroll] = useState<boolean>(false);
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState<boolean>(false);
   // # GET PATHNAME
+  // @ts-expect-error
   const pathname: string = usePathname().replace(/^\//, "");
   // # NAVBAR ITEM
   function displayNavbar(): JSX.Element[] {
@@ -37,7 +38,7 @@ export const Navbar: FC = () => {
             </div>
           ) : (
             <Link
-              href={item.link === "" ? "/" : `/pages/${item.link}`}
+              href={`/${item.link}`}
               className="naviItemLink"
             >
               {item.label}
@@ -50,7 +51,7 @@ export const Navbar: FC = () => {
                   <li key={index}>
                     <Link
                       href={
-                        sideNavItem.link === "" ? "/" : `/pages/${sideNavItem.link}`
+                        `/${sideNavItem.link}`
                       }
                     >
                       {sideNavItem.label}
@@ -98,7 +99,7 @@ export const Navbar: FC = () => {
         {/* RIGHT SIDE */}
         <div className="navbarItemsContainer">
           <ul className="navbarItems">{displayNavbar()}</ul>
-          <Link href={'/pages/login'}><i className="fa-solid fa-user-large"></i></Link>
+          <Link href={'/login'}><i className="fa-solid fa-user-large"></i></Link>
           <Button ariaLabel="book a table" labelBtn="book a table" />
         </div>
         {/* MOBILE RIGHT SIDE */}
@@ -111,7 +112,7 @@ export const Navbar: FC = () => {
         {/* DROP DOWN MENU */}
         <div className={`dropDownMenu ${hamburgerMenuOpen && "openDropDown"}`}>
           {displayNavbar()}
-          <Link href={'/pages/login'}><i className="fa-solid fa-user-large"></i></Link>
+          <Link href={'/login'}><i className="fa-solid fa-user-large"></i></Link>
           <Button
             ariaLabel="book a table"
             labelBtn="book a table"
